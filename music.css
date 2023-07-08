@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto:ital,wght@0,500;1,100;1,400;1,900&family=Ubuntu:wght@300&display=swap");
+
+body .musicPlayer  {
+  background-color: antiquewhite;
+  font-size: 14px;
+}
+.musicPlayer  {
+  margin: 0;
+  padding: 0;
+}
+ .musicPlayer h1 {
+  font-size: 10px;
+}
+ .musicPlayer nav {
+  font-family: "Ubuntu", sans-serif;
+}
+ .musicPlayer nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 8px;
+}
+ .musicPlayer nav ul li {
+  padding: 0 12px;
+}
+ .musicPlayer .brand img {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+}
+ .musicPlayer .brand {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+ .musicPlayer .container {
+  /* min-height: 72vh; */
+
+  background-color: black;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 8px;
+  display: flex;
+  margin: 20px auto;
+  width: 70%;
+  border-radius: 6px;
+  padding: 34px;
+  background-image: url("https://wallpapercave.com/wp/wp2059721.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.musicPlayer .bottom {
+  display: flex;
+  position: sticky;
+  height: 40px;
+  background-color: black;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  color: rgb(181, 244, 44);
+  flex-direction: column;
+}
+.musicPlayer .icons {
+  margin-top: 11px;
+  padding-top: 0px;
+  margin-bottom: 3px;
+  
+}
+.musicPlayer #myProgressBar {
+  width: 72vw;
+  height: 2px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.musicPlayer .songItemContainer{
+  margin-top: 34px;
+}
+.musicPlayer .songItem{
+ height: 18px;
+ display: flex;
+ background-color: white;
+ /* width: 80%; */
+ color: black;
+ margin: 3px 0;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 34px;
+}
+.musicPlayer .songItem img{
+  border-radius: 20px;
+  padding-left: 1.5px;
+}
+.musicPlayer .timestamp i:hover{
+  margin: 0 3px;
+  cursor: pointer;
+  color:red
+}
+
+.musicPlayer .songInfo{
+  position:absolute;
+  left: 61px;
+  top: 19px;
+  font-size: 8px;
+  align-items: center;
+  display: flex;
+}
+.musicPlayer .songInfo img{
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.musicPlayer #masterSongName{
+  padding-top: 4px;
+  /* padding-bottom: -8px; */
+  height: 3px;
+  color: rgb(237, 208, 23);
+  font-size: 10px;
+}
+@media only screen and (max-width:375px){
+  body  .musicPlayer {
+    background-color: red;
+
+  }
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto:ital,wght@0,500;1,100;1,400;1,900&family=Ubuntu:wght@300&display=swap");
+* .ticTacToe{
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  /* padding-right: 2px; */
+  background-color: white;
+}
+.ticTacToe nav{
+  background-color: purple;
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  font-family: "Ubuntu", sans-serif;
+}
+.ticTacToe nav ul{
+  list-style-type: none;
+}
+.ticTacToe .gameContainer{
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  
+}
+.ticTacToe .container{
+display: grid;
+grid-template-columns: repeat(3,10vw);
+grid-template-rows: repeat(3,10vw);
+font-family: ubuntu;
+margin-right: 50px;
+margin-left: 50px;
+margin-top: 50px;
+position: relative;
+}
+.ticTacToe .imgbox img{
+ 
+  height: 50px;
+  width:0px;
+  transition: width 1s ease-in-out;
+}
+.ticTacToe .box{
+  border: 1px solid black;
+  font-size:8vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ticTacToe .box:hover{
+  background-color: rgb(197, 71, 228);
+}
+.ticTacToe .gameInfo{
+  padding: 34zpx;
+  margin-top: 50px;
+}
+.ticTacToe .br-0{
+  border-right: 0;
+}
+.ticTacToe .bl-0{
+  border-left: 0;
+}
+.ticTacToe .bt-0{
+  border-top: 0;
+}
+.ticTacToe .bb-0{
+  border-bottom: 0;
+}
+.ticTacToe #reset{
+         margin: 0px 10px;
+         padding: 2px;
+         height: 20px;
+      
+         width: 50px;
+         background-color: lightblue;
+         border: 1px solid black;
+         border-radius: 4px;
+}
+.ticTacToe #reset:hover{
+  cursor: pointer;
+ background-color: rgb(247, 117, 117);
+}
+.ticTacToe .info{
+  font-size: 25px;
+  color: blue;
+}
+@media screen and (max-width: 400px) {
+  .ticTacToe .gameContainer{
+    flex-wrap: wrap;
+  }
+  .ticTacToe .gameInfo{
+    margin-top: 34px;
+  }
+  .ticTacToe .imgbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14px;
+  }
+}
+.ticTacToe .line{
+  background-color: black;
+  width:30vw;
+  height: 2px;
+  margin-top: 0px;
+  position: absolute;
+  /* transform: translate(30px, 33px) rotate(45deg); */
+  visibility: hidden;
+  background-color: purple;
+  transition:width 1s ease-in-out;
+}
+.ticTacToe .gameInfo{
+  padding-right: 40px;
+}

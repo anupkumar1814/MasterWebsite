@@ -1,0 +1,26 @@
+body .temperature{
+    padding: 50px 100px;
+    color: red;
+}
+.temperature h1{
+    text-align: center;
+}
+.temperature #container{
+text-align: center;
+background-color: lightgreen;
+padding: 50px;
+}
+.temperature .input-div{
+display: inline-block;
+}
+.temperature .inp{
+padding: 5px 10px;
+margin: 10px;
+font-size: 30px;
+font-weight: bold;
+width: 250px;
+text-align: center;
+}
+.temperature label{
+font-size: 22px;
+}

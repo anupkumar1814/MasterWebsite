@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Website</title>
+
+    <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="stopwatch.css" />
+    <link rel="stylesheet" href="ticTacToe.css" />
+    <link rel="stylesheet" href="temperature.css" />
+    <link rel="stylesheet" href="wordCounter.css" />
+    <link rel="stylesheet" href="music.css" />
+  </head>
+  <style>
+    .heading{
+      text-align: center;
+      color: red;
+    }
+  </style>
+  <body>
+    <h1 class="heading">Master Website</h1>
+    <div id="color-switcher">
+      <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+      <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+      <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+      <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+      <!-- /* stopwatch */ -->
+      <div class="stopwatch">
+        <div id="container">
+          <div id="time">
+            <span class="digit" id="hr">00</span>
+            <span class="text">Hr</span>
+            <span class="digit" id="min">00</span>
+            <span class="text">Min</span>
+            <span class="digit" id="sec">00</span>
+            <span class="text">sec</span>
+            <span class="digit" id="count">00</span>
+          </div>
+          <div id="btn-container">
+            <button class="btn" id="start" onclick="start()">Start</button>
+            <button class="btn" id="stop" onclick="stop()">Stop</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+          </div>
+        </div>
+      </div>
+      <!-- /* stopwatch end*/ -->
+
+      <!-- ticTactoe -->
+      <div class="ticTacToe">
+        <nav>
+          <ul>
+            <li>myTicTacToe</li>
+          </ul>
+        </nav>
+        <div class="gameContainer">
+          <div class="container">
+            <div class="line"></div>
+            <div class="box bt-0 bl-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 bl-0 br-0 bb-0">
+              <span class="boxtext"></span>
+            </div>
+            <div class="box bt-0 br-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box bl-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box br-0 bb-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box br-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box bl-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box bl-0 br-0 bb-0"><span class="boxtext"></span></div>
+            <div class="box br-0 bb-0"><span class="boxtext"></span></div>
+          </div>
+          <div class="gameInfo">
+            <h1 >welcome to ticTacToe</h1>
+            <div>
+              <span class="info">Turn for x</span>
+              <button id="reset1">Reset</button>
+            </div>
+            <div class="imgbox">
+              <img class="img1" src="./images/happy.gif" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ticTactoe end-->
+      <!-- temperature -->
+      <div class="temperature">
+        <h1>Temperatue Convertor</h1>
+        <div id="container">
+          <div class="input-div">
+            <label>Celsius</label> <br />
+            <input type="number" value="0" id="cel" class="inp" />
+          </div>
+          <div class="input-div">
+            <label>fahrenheit</label> <br />
+            <input type="number" value="32" id="fah" class="inp" />
+          </div>
+        </div>
+      </div>
+      <!-- temperature end -->
+
+      <!-- word counter -->
+      <div class="wordCounter">
+        <h1>word and character counter</h1>
+
+        <textarea id="textbox" name="" id="" cols="30" rows="10"></textarea>
+        <p>
+          <span id="word">0</span> words and
+          <span id="char">0</span> characters;
+        </p>
+      </div>
+      <!-- word counter end  -->
+
+      <!-- music -->
+      <div class="musicPlayer">
+        <nav>
+          <ul>
+            <li class="brand">
+              <img
+                src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-green-logo-8.png"
+                alt="spotify"
+                width="50px"
+                height="50px"
+              />
+              <span> Miuzik</span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="container">
+          <div class="songList">
+            <h1>Best of your collection</h1>
+            <div class="songItemContainer">
+              <div class="songItem">
+                <img
+                  src="images/cover1.jpg"
+                  alt="1"
+                  width="17px"
+                  height="17px"
+                />
+                <span class="songName">Let me love you</span>
+                <span class="songListPlay">
+                  <span class="timestamp"
+                    >05:34
+                    <i
+                      id="0"
+                      class="fa songItemPlay fa-1x solid fa-circle-play"
+                    ></i>
+                  </span>
+                </span>
+              </div>
+              <div class="songItem">
+                <img
+                  src="images/cover1.jpg"
+                  alt="1"
+                  width="17px"
+                  height="17px"
+                />
+                <span class="songName">Let me love you</span>
+                <span class="songListPlay">
+                  <span class="timestamp"
+                    >05:34
+                    <i
+                      id="1"
+                      class="fa songItemPlay fa-1x solid fa-circle-play"
+                    ></i>
+                  </span>
+                </span>
+              </div>
+              <div class="songItem">
+                <img
+                  src="images/cover1.jpg"
+                  alt="1"
+                  width="17px"
+                  height="17px"
+                />
+                <span class="songName">Let me love you</span>
+                <span class="songListPlay">
+                  <span class="timestamp"
+                    >05:34
+                    <i
+                      id="2"
+                      class="fa songItemPlay fa-1x solid fa-circle-play"
+                    ></i>
+                  </span>
+                </span>
+              </div>
+              <div class="songItem">
+                <img
+                  src="images/cover1.jpg"
+                  alt="1"
+                  width="17px"
+                  height="17px"
+                />
+                <span class="songName">Let me love you</span>
+                <span class="songListPlay">
+                  <span class="timestamp"
+                    >05:34
+                    <i
+                      id="3"
+                      class="fa songItemPlay fa-1x solid fa-circle-play"
+                    ></i>
+                  </span>
+                </span>
+              </div>
+              <div class="songItem">
+                <img
+                  src="images/cover1.jpg"
+                  alt="1"
+                  width="17px"
+                  height="17px"
+                />
+                <span class="songName">Let me love you</span>
+                <span class="songListPlay">
+                  <span class="timestamp"
+                    >05:34
+                    <i
+                      id="4"
+                      class="fa songItemPlay fa-1x solid fa-circle-play"
+                    ></i>
+                  </span>
+                </span>
+              </div>
+              <div class="songItem">
+                <img
+                  src="images/cover1.jpg"
+                  alt="1"
+                  width="17px"
+                  height="17px"
+                />
+                <span class="songName">Let me love you</span>
+                <span class="songListPlay">
+                  <span class="timestamp"
+                    >05:34
+                    <i
+                      id="5"
+                      class="fa songItemPlay fa-1x solid fa-circle-play"
+                    ></i>
+                  </span>
+                </span>
+              </div>
+              
+            </div>
+          </div>
+          <!-- <div class="songBanner"></div> -->
+        </div>
+        <div class="bottom">
+          <input
+            type="range"
+            name="range"
+            id="myProgressBar"
+            min="0"
+            max="100"
+            value="0"
+          />
+          <span id="masterSongName">song1</span>
+          <div class="icons">
+            <!-- font awesome icons -->
+
+            <i id="previous" class="fa fa-1x solid fa-backward"></i>
+            <i class="fa fa-1x solid fa-circle-play" id="masterPlay"></i>
+            <i id="next" class="fa fa-1x solid fa-forward"></i>
+          </div>
+          <div class="songInfo">
+            <img
+              src="https://media1.giphy.com/media/UtDM7J7nfpNsAajABM/200w.webp?cid=ecf05e476fega8ignson8ouwpl3hzon681ihmtplsex9pm2f&rid=200w.webp&ct=g"
+              alt=""
+              width="28px"
+              height="13px"
+              id="gif"
+            />
+            <!-- <span id="masterSongName">song1</span> -->
+          </div>
+        </div>
+      </div>
+      <!-- music end  -->
+    </div>
+    <script src="background.js"></script>
+    <script src="stopwatch.js"></script>
+    <script src="ticTacToe.js"></script>
+    <script src="temperature.js"></script>
+    <script src="wordCounter.js"></script>
+    <script src="music.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3f48e7eb16.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
